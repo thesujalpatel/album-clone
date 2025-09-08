@@ -1,0 +1,38 @@
+:root {
+  --color-background: white;
+  --color-foreground: black;
+  --color-accent: #212529;
+  --color-primary: blue;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+}
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+/* Component Variations */
+.btn1,
+.btn2,
+.btn3 {
+}
+
+/* Header */
+header {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.navhead-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.about {
+  grid-column: 1/3;
+}
