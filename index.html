@@ -5,56 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/styles.css" />
+
     <title>Album Clone</title>
   </head>
   <body>
     <header>
-      <section class="navhead">
+      <!-- Collapsible Navigation -->
+      <div class="collapsible-nav" id="collapsible-nav">
         <div class="container">
-          <div class="navhead-wrapper">
-            <section class="about">
-              <div class="about-wrapper">
-                <h4 class="about-title">About</h4>
-                <div class="about-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                  voluptatum incidunt atque velit recusandae dignissimos iure
-                  fuga molestias maiores debitis?
-                </div>
+          <div class="collapsible-nav-wrapper">
+            <div class="about-wrapper">
+              <h4 class="collapsible-nav-title">About</h4>
+              <div class="about-body">
+                Add some information about the album below, the author, or any
+                other background context. Make it a few sentences long so folks
+                can pick up some informative tidbits. Then, link them off to
+                some social networking sites or contact information.
               </div>
-            </section>
-            <section class="contact">
-              <div class="contact-wrapper">
-                <h4 class="contact-title">Contact</h4>
-                <div class="contact-body">
-                  <div class="contact-option">Twitter</div>
-                  <div class="contact-option">Facebook</div>
-                  <div class="contact-option">Email</div>
-                </div>
+            </div>
+            <div class="contact-wrapper">
+              <h4 class="collapsible-nav-title">Contact</h4>
+              <div class="contact-options">
+                <a href="#" class="contact-option">Follow on Twitter</a>
+                <a href="#" class="contact-option">Like on Facebook</a>
+                <a href="#" class="contact-option">Email me</a>
               </div>
-            </section>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- mAIN hEADER -->
+      <!-- Main Navigation -->
       <nav>
         <div class="container">
           <div class="nav-wrapper">
-            <div class="nav-logo">
-              <!-- <img src="" alt="" /> -->
-              Logo
-            </div>
-            <div class="action">Acion Button</div>
+            <a class="nav-logo-wrapper" href="#">
+              <img class="nav-logo" src="assets/svg/Logo.svg" alt="Logo" />
+            </a>
+            <button
+              class="btn btn-menu"
+              title="Open navigation menu"
+              id="menu-btn"
+            >
+              <svg
+                class="action-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+              >
+                <path
+                  d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+                  fill="var(--color-background)"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero-section">
         <div class="container">
           <div class="hero-wrapper">
-            <div class="hero-title">Album Clone</div>
+            <h1 class="hero-title">Album Clone</h1>
 
             <div class="hero-body">
               <div class="hero-description">
@@ -63,31 +76,214 @@
                 short so folks don’t simply skip over it entirely.
               </div>
               <div class="hero-actions">
-                <button class="hero-cta btn1">Button 1</button>
-                <button class="hero-cta btn2">Button 2</button>
+                <button class="btn btn-primary hero-cta">
+                  Main call to action
+                </button>
+                <button class="btn btn-secondary hero-cta">
+                  Secondary action
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="gallery">
+      <section class="gallery-section">
         <div class="container">
-          <div class="gallery-wrapper">
-            <div class="picture-card">
-              <div class="picture-title">
-                Thumbnail
-                <!-- <img src="" alt=""> -->
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
               </div>
-              <div class="picture-body">
-                <div class="picture-description">
+              <div class="card-body">
+                <div class="card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Facilis repellendus pariatur temporibus placeat id voluptates.
                 </div>
-                <div class="picture-footer">
-                  <div class="picture-footer-actions">
-                    <button class="picture-footer-actions btn3">View</button>
-                    <button class="picture-footer-actions btn3">Edit</button>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
+                  </div>
+                  <div class="timestamp">9 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-wrapper">
+                <img
+                  class="picture-image"
+                  src="https://picsum.photos/400/200?grayscale"
+                  alt="photo"
+                />
+              </div>
+              <div class="card-body">
+                <div class="card-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                </div>
+                <div class="card-footer">
+                  <div class="card-footer-actions">
+                    <button class="btn btn-outline">View</button>
+                    <button class="btn btn-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
@@ -102,11 +298,18 @@
       <div class="container">
         <div class="footer-wrapper">
           <div class="footer-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-            officiis aspernatur aliquam nostrum fugit tenetur, error adipisci
-            iure odit natus.
+            <p>
+              Album Clone example is © Bootstrap, but please download and
+              customize it for yourself!
+            </p>
+            <a href="#" class="footer-action">Back to top</a>
           </div>
-          <div class="footer-action">Back to top</div>
+          <div class="aknowladge">
+            New to Bootstrap?
+            <a href="#"> Visit the homepage</a>
+            or read our
+            <a href="#"> getting started guide.</a>
+          </div>
         </div>
       </div>
     </footer>
