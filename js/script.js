@@ -6,11 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.addEventListener("click", function () {
     if (menuOpen) {
-      collapsibleNav.style.height = "0";
+      collapsibleNav.style.height = collapsibleNav.scrollHeight + "px";
+      setTimeout(function () {
+        collapsibleNav.style.height = "0px";
+      }, 1);
     } else {
       collapsibleNav.style.height = collapsibleNav.scrollHeight + "px";
+      setTimeout(function () {
+        if (menuOpen) {
+          collapsibleNav.style.height = "auto";
+        }
+      }, 300);
     }
     menuOpen = !menuOpen;
-    s;
   });
 });

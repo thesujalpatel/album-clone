@@ -131,9 +131,10 @@ header {
 }
 .collapsible-nav {
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: height 0.3s ease;
   height: 0;
 }
+
 .collapsible-nav-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -247,6 +248,7 @@ header {
   color: var(--color-background);
   aspect-ratio: 16/9;
   overflow: hidden;
+  -webkit-user-select: none;
   user-select: none;
   display: flex;
   align-items: center;
