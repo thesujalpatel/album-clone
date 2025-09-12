@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Album Clone</title>
   </head>
@@ -43,7 +49,7 @@
               <img class="nav-logo" src="assets/svg/Logo.svg" alt="Logo" />
             </a>
             <button
-              class="btn btn-menu"
+              class="button button-toggle"
               title="Open navigation menu"
               id="menu-btn"
             >
@@ -54,7 +60,7 @@
               >
                 <path
                   d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
-                  fill="var(--color-background)"
+                  fill="var(--light)"
                 />
               </svg>
             </button>
@@ -76,10 +82,10 @@
                 short so folks don’t simply skip over it entirely.
               </p>
               <div class="hero-actions">
-                <button class="btn btn-primary hero-cta">
+                <button class="button button-primary button-lg">
                   Main call to action
                 </button>
-                <button class="btn btn-secondary hero-cta">
+                <button class="button button-secondary button-lg">
                   Secondary action
                 </button>
               </div>
@@ -88,202 +94,229 @@
         </div>
       </section>
 
-      <section class="gallery-section">
+      <section class="album-section">
         <div class="container">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-img-wrapper">
+          <div class="album-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-img-wrapper">
+            <div class="album-card">
+              <div class="album-card-img-wrapper">
                 <img
-                  class="picture-image"
+                  class="album-card-img"
                   src="https://picsum.photos/400/200?grayscale"
                   alt="photo"
                 />
               </div>
-              <div class="card-body">
-                <p class="card-description">
+              <div class="album-card-body">
+                <p class="album-card-description">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Facilis repellendus pariatur temporibus placeat id voluptates.
+                  Atque tempora, minima doloribus consectetur recusandae
+                  reprehenderit, ab, magnam consequatur dolorem necessitatibus
+                  cum? Sunt ipsum blanditiis, ipsa veritatis vitae consequatur
+                  eveniet officiis.
                 </p>
-                <div class="card-footer">
-                  <div class="card-footer-actions">
-                    <button class="btn btn-outline">View</button>
-                    <button class="btn btn-outline">Edit</button>
+                <div class="album-card-footer">
+                  <div class="button-group-wrapper">
+                    <button class="button button-outline">View</button>
+                    <button class="button button-outline">Edit</button>
                   </div>
                   <div class="timestamp">9 mins</div>
                 </div>

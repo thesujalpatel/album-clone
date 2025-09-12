@@ -1,50 +1,26 @@
 :root {
   /* Main Colors */
-  --color-background: #fff;
-  --color-foreground: #000;
-  --color-accent: #212529;
-  --color-primary: #0d6efd;
-  --color-secondary: #6c757d;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --light: #fff;
+  --dark: #000;
+  --accent: #212529;
 
-  /* Alpha Shades */
-  /* 30% Shades */
-  --color-background-30: color-mix(
-    in srgb,
-    var(--color-background) 30%,
-    transparent
-  );
-  --color-foreground-30: color-mix(
-    in srgb,
-    var(--color-foreground) 30%,
-    transparent
-  );
-  --color-primary-30: color-mix(in srgb, var(--color-primary) 30%, transparent);
-  --color-secondary-30: color-mix(
-    in srgb,
-    var(--color-secondary) 30%,
-    transparent
-  );
+  /* Fonts */
+  --sans-serif: "Roboto", sans-serif;
+
+  /* Alpha Shades - 30% Shades */
+  --primary-30: color-mix(in srgb, var(--primary) 30%, transparent);
+  --secondary-30: color-mix(in srgb, var(--secondary) 30%, transparent);
+  --light-30: color-mix(in srgb, var(--light) 30%, transparent);
+  --dark-30: color-mix(in srgb, var(--dark) 30%, transparent);
 
   /* Custome Colors */
-  --color-gallery-bg: color-mix(
-    in srgb,
-    var(--color-secondary) 5%,
-    transparent
-  );
-  --color-btn-primary-hover: color-mix(
-    in srgb,
-    var(--color-primary) 80%,
-    var(--color-foreground)
-  );
-  --color-btn-secondary-hover: color-mix(
-    in srgb,
-    var(--color-secondary) 80%,
-    var(--color-foreground)
-  );
-  /* Fonts */
-  --font-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --primary-dark: color-mix(in srgb, var(--primary) 80%, var(--dark));
+  --secondary-dark: color-mix(in srgb, var(--secondary) 80%, var(--dark));
+  --secondary-tint: color-mix(in srgb, var(--secondary) 5%, transparent);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -52,16 +28,18 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: var(--font-sans-serif);
+  font-family: var(--sans-serif);
 }
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
+a:any-link {
+  color: var(--primary);
+}
 /* Component Variations */
-.btn {
+.button {
   background-color: transparent;
   border: 0 solid;
   cursor: pointer;
@@ -70,63 +48,71 @@ body {
   padding: 5px 10px;
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  border: 2px solid var(--color-primary-30);
-  box-shadow: 0 0 0 0 var(--color-primary-30);
+/*  Varients */
+.button-primary {
+  background-color: var(--primary);
+  color: var(--light);
+  border: 2px solid var(--primary-30);
+  box-shadow: 0 0 0 0 var(--primary-30);
 }
-.btn-primary:focus {
-  box-shadow: 0 0 0 6px var(--color-primary-30);
-  border: var(--color-primary-30) 2px solid;
-  background-color: var(--color-btn-primary-hover);
+.button-primary:focus {
+  box-shadow: 0 0 0 6px var(--primary-30);
+  border: var(--primary-30) 2px solid;
+  background-color: var(--primary-dark);
 }
-.btn-primary:hover {
-  background-color: var(--color-btn-primary-hover);
-}
-.btn-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-  border: 2px solid var(--color-secondary-30);
-  box-shadow: 0 0 0 0 var(--color-secondary-30);
-}
-.btn-secondary:focus {
-  box-shadow: 0 0 0 6px var(--color-secondary-30);
-  border: var(--color-foreground-30) 2px solid;
-  background-color: var(--color-btn-secondary-hover);
-}
-.btn-secondary:hover {
-  background-color: var(--color-btn-secondary-hover);
-}
-.btn-outline {
-  padding: 8px 12px;
-  border-radius: 0;
-  border: 1px solid var(--color-foreground-30);
-  box-shadow: 0 0 0 0 var(--color-foreground-30);
-  color: var(--color-secondary);
-}
-.btn-outline:focus {
-  box-shadow: 0 0 0 4px var(--color-foreground-30);
-  border: var(--color-foreground-30) 1px solid;
-}
-.btn-outline:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
+.button-primary:hover {
+  background-color: var(--primary-dark);
 }
 
-.btn-menu {
-  border: 2px solid var(--color-background-30);
-  box-shadow: 0 0 0 0 var(--color-background-30);
+.button-secondary {
+  background-color: var(--secondary);
+  color: var(--light);
+  border: 2px solid var(--secondary-30);
+  box-shadow: 0 0 0 0 var(--secondary-30);
 }
-.btn-menu:focus {
-  box-shadow: 0 0 0 4px var(--color-background-30);
-  border: var(--color-background-30) 2px solid;
+.button-secondary:focus {
+  box-shadow: 0 0 0 6px var(--secondary-30);
+  border: var(--secondary) 2px solid;
+  background-color: var(--secondary-dark);
+}
+.button-secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+.button-outline {
+  padding: 8px 12px;
+  border-radius: 0;
+  border: 1px solid var(--dark-30);
+  box-shadow: 0 0 0 0 var(--dark-30);
+  color: var(--secondary);
+}
+.button-outline:focus {
+  box-shadow: 0 0 0 4px var(--dark-30);
+  border: var(--dark-30) 1px solid;
+}
+.button-outline:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.button-toggle {
+  border: 2px solid var(--light-30);
+  box-shadow: 0 0 0 0 var(--light-30);
+}
+.button-toggle:focus {
+  box-shadow: 0 0 0 4px var(--light-30);
+  border: var(--light-30) 2px solid;
+}
+/* Size */
+.button-lg {
+  font-size: 18px;
+  padding: 7px 15px;
 }
 
 /* Header */
 header {
-  background-color: var(--color-accent);
-  color: var(--color-background);
+  background-color: var(--accent);
+  color: var(--light);
 }
 .collapsible-nav {
   overflow: hidden;
@@ -136,7 +122,7 @@ header {
 
 .collapsible-nav-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 20px 0;
   position: relative;
   gap: 50px;
@@ -151,21 +137,18 @@ header {
 }
 
 .about-body {
-  font-weight: 100;
+  font-weight: 300;
   opacity: 50%;
   line-height: 1.5rem;
   font-size: 18px;
-  padding-right: 50px;
 }
 .contact-options {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.contact-option {
-  display: block;
-  text-decoration: underline;
-  color: var(--color-background);
+.contact-option:any-link {
+  color: var(--light);
 }
 .nav-wrapper {
   display: flex;
@@ -180,7 +163,7 @@ header {
 .nav-logo {
   width: 200px;
 }
-.btn-menu {
+.button-toggle {
   margin: 2px 0;
   padding: 4px 12px;
   display: flex;
@@ -193,8 +176,10 @@ header {
 }
 
 /* Hero Section */
-.hero-wrapper {
+.hero-section {
   padding: 100px 0;
+}
+.hero-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,7 +187,7 @@ header {
   gap: 15px;
 }
 .hero-title {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 45px;
   text-align: center;
 }
@@ -213,12 +198,12 @@ header {
 }
 .hero-description {
   font-size: 22px;
-  color: var(--color-foreground);
+  color: var(--dark);
   max-width: 600px;
   text-align: center;
   opacity: 70%;
   line-height: 2rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 .hero-actions {
   display: flex;
@@ -226,49 +211,41 @@ header {
   justify-content: center;
   gap: 8px;
 }
-.hero-cta {
-  font-size: 18px;
-  padding: 7px 15px;
-  font-weight: 100;
-}
 
-/* Gallery - Album Grid */
-.gallery-section {
-  background-color: var(--color-gallery-bg);
-}
-.card-wrapper {
+/* Album Grid */
+.album-section {
   padding: 50px 0;
+  background-color: var(--secondary-tint);
+}
+.album-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 20px;
 }
 /* Picture Card */
-.card-img-wrapper {
-  background-color: var(--color-accent);
-  color: var(--color-background);
+.album-card-img-wrapper {
+  background-color: var(--accent);
+  color: var(--light);
   aspect-ratio: 16/9;
   overflow: hidden;
   -webkit-user-select: none;
   user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.card {
-  background-color: var(--color-background);
+.album-card {
+  background-color: var(--light);
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 0 5px var(--color-foreground-30);
+  box-shadow: 0 0 5px var(--dark-30);
 }
 
-.picture-image {
+.album-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.card-body {
+.album-card-body {
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -276,42 +253,43 @@ header {
   gap: 1rem;
   flex: 1;
 }
-.card-description {
-  font-size: 16px;
+.album-card-description {
   opacity: 80%;
   line-height: 1.7rem;
 }
-.card-footer {
+.album-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card-footer-actions {
+.button-group-wrapper {
   display: inline-flex;
-  box-sizing: border-box;
-  border: 1px solid var(--color-foreground-30);
+  border: 1px solid var(--dark-30);
   border-radius: 6px;
 }
 .timestamp {
   opacity: 40%;
-  font-size: 16px;
 }
-.btn-outline:first-child {
+.button-outline:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.btn-outline:last-child {
+.button-outline:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.footer-wrapper {
+footer {
   padding: 50px 0;
+}
+.footer-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 18px;
+  font-weight: 300;
   width: 100%;
+  color: var(--secondary);
 }
 .footer-description {
   display: flex;
@@ -330,7 +308,7 @@ header {
   .nav-logo {
     width: 150px;
   }
-  .btn-menu {
+  .button-toggle {
     margin: 0;
     padding: 0 8px;
   }
@@ -338,7 +316,7 @@ header {
     height: 30px;
     width: 30px;
   }
-  .hero-wrapper {
+  .hero-section {
     padding: 50px 0px;
   }
   .hero-title {
@@ -347,11 +325,11 @@ header {
   .hero-description {
     font-size: 18px;
   }
-  .hero-cta {
+  .button-lg {
     font-size: 14px;
   }
-  .card-wrapper {
-    grid-template-columns: 1fr 1fr;
+  .album-wrapper {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
   }
   .collapsible-nav-wrapper {
     display: flex;
@@ -367,7 +345,7 @@ header {
   .hero-title {
     font-size: 30px;
   }
-  .card-wrapper {
-    grid-template-columns: 1fr;
+  .album-wrapper {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
   }
 }
