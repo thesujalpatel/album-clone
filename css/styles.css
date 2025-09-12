@@ -18,7 +18,6 @@
     var(--color-foreground) 30%,
     transparent
   );
-  --color-accent-30: color-mix(in srgb, var(--color-accent) 30%, transparent);
   --color-primary-30: color-mix(in srgb, var(--color-primary) 30%, transparent);
   --color-secondary-30: color-mix(
     in srgb,
@@ -26,6 +25,22 @@
     transparent
   );
 
+  /* Custome Colors */
+  --color-gallery-bg: color-mix(
+    in srgb,
+    var(--color-secondary) 5%,
+    transparent
+  );
+  --color-btn-primary-hover: color-mix(
+    in srgb,
+    var(--color-primary) 80%,
+    var(--color-foreground)
+  );
+  --color-btn-secondary-hover: color-mix(
+    in srgb,
+    var(--color-secondary) 80%,
+    var(--color-foreground)
+  );
   /* Fonts */
   --font-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -64,18 +79,10 @@ body {
 .btn-primary:focus {
   box-shadow: 0 0 0 6px var(--color-primary-30);
   border: var(--color-primary-30) 2px solid;
-  background-color: color-mix(
-    in srgb,
-    var(--color-primary) 80%,
-    var(--color-foreground)
-  );
+  background-color: var(--color-btn-primary-hover);
 }
 .btn-primary:hover {
-  background-color: color-mix(
-    in srgb,
-    var(--color-primary) 80%,
-    var(--color-foreground)
-  );
+  background-color: var(--color-btn-primary-hover);
 }
 .btn-secondary {
   background-color: var(--color-secondary);
@@ -86,18 +93,10 @@ body {
 .btn-secondary:focus {
   box-shadow: 0 0 0 6px var(--color-secondary-30);
   border: var(--color-foreground-30) 2px solid;
-  background-color: color-mix(
-    in srgb,
-    var(--color-secondary) 80%,
-    var(--color-foreground)
-  );
+  background-color: var(--color-btn-secondary-hover);
 }
 .btn-secondary:hover {
-  background-color: color-mix(
-    in srgb,
-    var(--color-secondary) 80%,
-    var(--color-foreground)
-  );
+  background-color: var(--color-btn-secondary-hover);
 }
 .btn-outline {
   padding: 8px 12px;
@@ -195,7 +194,7 @@ header {
 
 /* Hero Section */
 .hero-wrapper {
-  padding: 100px 30px;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,11 +229,12 @@ header {
 .hero-cta {
   font-size: 18px;
   padding: 7px 15px;
+  font-weight: 100;
 }
 
 /* Gallery - Album Grid */
 .gallery-section {
-  background-color: color-mix(in srgb, var(--color-secondary) 5%, transparent);
+  background-color: var(--color-gallery-bg);
 }
 .card-wrapper {
   padding: 50px 0;
@@ -339,7 +339,7 @@ header {
     width: 30px;
   }
   .hero-wrapper {
-    padding: 50px 15px;
+    padding: 50px 0px;
   }
   .hero-title {
     font-size: 40px;
@@ -357,10 +357,16 @@ header {
     display: flex;
     flex-direction: column;
   }
+  .footer-wrapper {
+    font-size: 16px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
   .card-wrapper {
     grid-template-columns: 1fr;
   }
