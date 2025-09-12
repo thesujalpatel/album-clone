@@ -308,8 +308,7 @@ footer {
   .nav-logo {
     width: 150px;
   }
-  .button-toggle {
-    margin: 0;
+  .btn-toggle {
     padding: 0 8px;
   }
   .menu-icon {
@@ -325,7 +324,7 @@ footer {
   .hero-description {
     font-size: 18px;
   }
-  .button-lg {
+  .btn-lg {
     font-size: 14px;
   }
   .album-wrapper {
