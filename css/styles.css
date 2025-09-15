@@ -1,10 +1,10 @@
 :root {
   /* Main Colors */
-  --primary: #0d6efd;
-  --secondary: #6c757d;
   --light: #fff;
   --dark: #000;
-  --accent: #212529;
+  --primary: #0d6efd;
+  --secondary: #5c636a;
+  --accent: #777777;
 
   /* Fonts */
   --font-roboto: "Roboto";
@@ -280,6 +280,7 @@ header {
   border-bottom-right-radius: 5px;
 }
 
+/* Footer Section */
 footer {
   padding: 50px 0;
 }
