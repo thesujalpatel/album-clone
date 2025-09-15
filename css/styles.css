@@ -158,10 +158,11 @@ header {
 .nav-logo-wrapper {
   display: flex;
   align-items: center;
-}
-
-.nav-logo {
   width: 200px;
+}
+.nav-logo {
+  height: 100%;
+  width: 100%;
 }
 .button-toggle {
   margin: 2px 0;
@@ -305,7 +306,7 @@ footer {
 
 /* Tab */
 @media (max-width: 1024px) {
-  .nav-logo {
+  .nav-logo-wrapper {
     width: 150px;
   }
   .btn-toggle {
