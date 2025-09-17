@@ -5,6 +5,7 @@
   --primary: #0d6efd;
   --secondary: #5c636a;
   --accent: #777777;
+  --gray: #212529;
 
   /* Fonts */
   --font-roboto: "Roboto";
@@ -111,7 +112,7 @@ a:any-link {
 
 /* Header */
 header {
-  background-color: var(--accent);
+  background-color: var(--gray);
   color: var(--light);
 }
 .collapsible-nav {
@@ -153,16 +154,16 @@ header {
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
 }
 .nav-logo-wrapper {
-  display: flex;
-  align-items: center;
-  width: 200px;
+  height: 40px;
 }
 .nav-logo {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .button-toggle {
   margin: 2px 0;
@@ -224,14 +225,6 @@ header {
   gap: 20px;
 }
 /* Picture Card */
-.album-card-img-wrapper {
-  background-color: var(--accent);
-  color: var(--light);
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  -webkit-user-select: none;
-  user-select: none;
-}
 .album-card {
   background-color: var(--light);
   display: flex;
@@ -239,6 +232,15 @@ header {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 5px var(--dark-30);
+}
+
+.album-card-img-wrapper {
+  background-color: var(--accent);
+  color: var(--light);
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .album-card-img {
@@ -285,18 +287,10 @@ footer {
   padding: 50px 0;
 }
 .footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-size: 18px;
   font-weight: 300;
   width: 100%;
   color: var(--secondary);
-}
-.footer-description {
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
 }
 .footer-action {
   white-space: nowrap;
@@ -304,11 +298,14 @@ footer {
 .footer-content {
   opacity: 70%;
 }
-
+.footer-action {
+  float: right;
+  padding-left: 20px;
+}
 /* Tab */
 @media (max-width: 1024px) {
   .nav-logo-wrapper {
-    width: 150px;
+    height: 30px;
   }
   .btn-toggle {
     padding: 0 8px;
@@ -337,7 +334,7 @@ footer {
     flex-direction: column;
   }
   .footer-wrapper {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
