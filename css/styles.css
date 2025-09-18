@@ -292,13 +292,11 @@ footer {
   width: 100%;
   color: var(--secondary);
 }
+.acknowledge {
+  color: var(--secondary);
+}
 .footer-action {
   white-space: nowrap;
-}
-.footer-content {
-  opacity: 70%;
-}
-.footer-action {
   float: right;
   padding-left: 20px;
 }
@@ -307,7 +305,7 @@ footer {
   .nav-logo-wrapper {
     height: 30px;
   }
-  .btn-toggle {
+  .button-toggle {
     padding: 0 8px;
   }
   .menu-icon {
@@ -323,7 +321,7 @@ footer {
   .hero-description {
     font-size: 18px;
   }
-  .btn-lg {
+  .button-lg {
     font-size: 14px;
   }
   .album-wrapper {
